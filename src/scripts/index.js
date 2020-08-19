@@ -7,8 +7,13 @@ let repositories = [];
 const searchInfo = () => {    
     let inputText = inputElement.value;
     
+    renderLoading();
+
     axios.get(`https://api.github.com/users/${inputText}/repos`)
         .then(response => {
+
+            listElement.innerHTML= '';
+
             repositories.push(...response.data);
             repositories.forEach(item => {
                 
@@ -26,7 +31,16 @@ const searchInfo = () => {
             });
         })
         .catch(error => {
-            console.warn('Erro na requisição.');
+            console.warn(error);
             alert('User does not exist');
     });
 };
+
+const renderLoading = () => {
+    listElement.innerHTML = '';
+
+    let loadingElement = document.createElement('li');
+        loadingElement = document.createTextNode('Loading...');
+        
+    listElement.appendChild(loadingElement);
+}
