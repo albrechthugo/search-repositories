@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="shortcut icon" href="../src/assets/loupe.png" type="image/x-icon">
     <title>Search Your GitHub Repositories</title>
 </head>
 <body>
     <div id="container">
         <input type="text" class="user" placeholder="Enter your GitHub username">
         <button class="search" onclick="searchInfo()">Search</button>
-        <ul class="repo-list"></ul>
+        <ul class="repo-list">
+        </ul>
     </div>
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

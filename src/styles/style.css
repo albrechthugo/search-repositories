@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 
-    font-family: 'Ubuntu';
+    font-family: 'Montserrat';
     color: black;
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 .user {
-    width: 200px;
+    width: 250px;
     height: 30px;
     border-radius: 0.2rem;
     border-style: solid;
@@ -43,16 +43,11 @@ body {
 
     margin-top: 1rem;
 
-    background-color: #ff79c6;
+    background-color: #7159C1;
     cursor: pointer;
 
-    transition: color 0.2s;
+    transition: background 0.5s;
 }
-
-.search:hover {
-    background-color: #ff2ec7;
-}
-
 
 .repo-list {
     padding-top: 1rem;
@@ -65,10 +60,12 @@ body {
 .repo-list * {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: #ffb86c;
+    color: #EAEAEA;
     text-decoration: none;
+
+    transition: 0.5s;
 }
 
 .repo-list *:hover {
-    color: #ff9729;
+    color: #50fa7b;
 }
